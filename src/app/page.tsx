@@ -20,12 +20,12 @@ export default function Home() {
         width={1500}
         height={1500}
       />
-      <div className='absolute right-10 top-24 bg-sky-600/60 p-8 text-white'>
+      <div className='absolute right-2 top-24 bg-sky-600/60 p-8 text-white max-md:left-2 md:right-10'>
         <h1 className='text-2xl'>Technology Based HIV Program for the Youth</h1>
         <p className='mt-3 text-sm'>
           In time we will put the proper slogan/tagline of THPPY here
         </p>
-        <div className='mt-10 flex gap-2'>
+        <div className='mt-10 flex justify-center gap-2 md:justify-start'>
           <button className='w-44 rounded-sm bg-red-600/90 py-2'>
             <h3>Forum</h3>
             <p className='text-xs'>Let&apos;s Converse</p>
@@ -37,7 +37,7 @@ export default function Home() {
         </div>
       </div>
       <div className='absolute -bottom-20 w-full'>
-        <nav className='mx-auto  flex justify-center gap-16 bg-sky-600/95 p-8 text-white md:w-[45vw]'>
+        <nav className='mx-auto flex justify-center gap-16 bg-sky-600/95 p-8 text-white lg:w-[45vw]'>
           <SocialLink
             icon={<IconBrandFacebook />}
             href='https://www.facebook.com/THEREALTHPPY'
