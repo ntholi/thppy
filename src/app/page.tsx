@@ -66,7 +66,7 @@ export default function Home() {
           </nav>
         </div>
       </div>
-      <section className='container mx-auto mt-32 grid grid-cols-12 px-4'>
+      <section className='container mx-auto mt-32 grid grid-cols-12 px-2 md:px-10'>
         <article className='col-span-8'>
           <About />
         </article>

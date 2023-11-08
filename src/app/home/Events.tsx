@@ -18,17 +18,19 @@ export default async function EventsView() {
 
       <div className='mt-5'>
         {events.map((event) => (
-          <article key={event.id} className='flex'>
-            <div className='flex flex-col items-center justify-center bg-sky-500 px-6 py-3 text-white'>
-              <p>{event.date.getDay()}</p>
-              <p>{event.date.toLocaleString('default', { month: 'short' })}</p>
+          <article key={event.id} className='mb-5 flex'>
+            <div className='flex flex-col items-center justify-center gap-3 bg-sky-500 px-6 py-3 text-white'>
+              <p className='border-b-1 font-bold'>{event.date.getDay()}</p>
+              <p className='font-semibold'>
+                {event.date.toLocaleString('default', { month: 'short' })}
+              </p>
             </div>
-            <div className='ml-5'>
+            <div className='ml-5 border-b pb-2'>
               <h3>{event.name}</h3>
               <p className='flex items-center gap-1 text-sm text-gray-500'>
                 <IconMapPin size='0.9rem' /> {event.location}{' '}
               </p>
-              <p className='mt-2 pr-3 text-sm'>{event.description}</p>
+              <p className='mt-2 w-[80%] pr-3 text-sm'>{event.description}</p>
             </div>
           </article>
         ))}
