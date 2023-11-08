@@ -20,24 +20,24 @@ export default function Home() {
         width={1500}
         height={1500}
       />
-      <div className='absolute bg-sky-600/60 text-white p-8 top-24 right-10'>
+      <div className='absolute right-10 top-24 bg-sky-600/60 p-8 text-white'>
         <h1 className='text-2xl'>Technology Based HIV Program for the Youth</h1>
-        <p className='text-sm mt-3'>
+        <p className='mt-3 text-sm'>
           In time we will put the proper slogan/tagline of THPPY here
         </p>
         <div className='mt-10 flex gap-2'>
-          <button className='py-2 w-44 bg-red-600/90 rounded-sm'>
+          <button className='w-44 rounded-sm bg-red-600/90 py-2'>
             <h3>Forum</h3>
             <p className='text-xs'>Let&apos;s Converse</p>
           </button>
-          <button className='py-2 w-44 bg-black/50 rounded-sm'>
+          <button className='w-44 rounded-sm bg-black/50 py-2'>
             <h3>Messages</h3>
             <p className='text-xs'>Private Messages</p>
           </button>
         </div>
       </div>
       <div className='absolute -bottom-20 w-full'>
-        <nav className='bg-sky-600/95 w-[45vw] mx-auto p-8 flex justify-center gap-16 text-white'>
+        <nav className='mx-auto  flex justify-center gap-16 bg-sky-600/95 p-8 text-white md:w-[45vw]'>
           <SocialLink
             icon={<IconBrandFacebook />}
             href='https://www.facebook.com/THEREALTHPPY'
@@ -76,7 +76,7 @@ const SocialLink = ({
   <Link
     href={href}
     target='_blank'
-    className='flex justify-center items-center flex-col group'
+    className='group flex flex-col items-center justify-center'
   >
     {React.cloneElement(icon as React.ReactElement, {
       size: '3.5rem',
