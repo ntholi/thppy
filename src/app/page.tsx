@@ -28,7 +28,7 @@ export default function Home() {
         <div className='mt-10 flex gap-2'>
           <button className='py-2 w-44 bg-red-600/90 rounded-sm'>
             <h3>Forum</h3>
-            <p className='text-xs'>Lets Converse</p>
+            <p className='text-xs'>Let&apos;s Converse</p>
           </button>
           <button className='py-2 w-44 bg-black/50 rounded-sm'>
             <h3>Messages</h3>
@@ -38,10 +38,26 @@ export default function Home() {
       </div>
       <div className='absolute -bottom-20 w-full'>
         <nav className='bg-sky-600/95 w-[45vw] mx-auto p-8 flex justify-center gap-16 text-white'>
-          <SocialLink icon={<IconBrandFacebook />} href='#' label='Facebook' />
-          <SocialLink icon={<IconBrandInstagram />} href='#' label='Twitter' />
-          <SocialLink icon={<IconBrandTwitter />} href='#' label='Instagram' />
-          <SocialLink icon={<IconBrandYoutube />} href='#' label='Youtube' />
+          <SocialLink
+            icon={<IconBrandFacebook />}
+            href='https://www.facebook.com/THEREALTHPPY'
+            label='Facebook'
+          />
+          <SocialLink
+            icon={<IconBrandInstagram />}
+            href='https://www.instagram.com/therealthppy'
+            label='Twitter'
+          />
+          <SocialLink
+            icon={<IconBrandTwitter />}
+            href='https://twitter.com/therealthppy'
+            label='Instagram'
+          />
+          <SocialLink
+            icon={<IconBrandYoutube />}
+            href='https://www.youtube.com/channel/UCDmUEN0IH_3ZA1xAP95HrCw'
+            label='Youtube'
+          />
         </nav>
       </div>
     </main>
@@ -57,7 +73,11 @@ const SocialLink = ({
   href: string;
   label: string;
 }) => (
-  <Link href={href} className='flex justify-center items-center flex-col group'>
+  <Link
+    href={href}
+    target='_blank'
+    className='flex justify-center items-center flex-col group'
+  >
     {React.cloneElement(icon as React.ReactElement, {
       size: '3.5rem',
       className: 'border rounded-full p-3 group-hover:bg-white/10',

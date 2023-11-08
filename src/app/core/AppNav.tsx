@@ -19,7 +19,6 @@ export default function AppNav() {
 
   const menuItems = [
     'Home',
-    "Let's Converse",
     'Boot camps',
     'Service Providers',
     'Downloads',
@@ -44,11 +43,6 @@ export default function AppNav() {
         <NavbarItem isActive>
           <Link color='foreground' href='#'>
             Home
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color='foreground' href='#'>
-            Let&apos;s Converse
           </Link>
         </NavbarItem>
         <NavbarItem>
