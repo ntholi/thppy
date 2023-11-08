@@ -15,18 +15,18 @@ export default function Home() {
       <Image
         src='/images/happy-teen-unsplash.jpg'
         alt='THPPY'
-        className='h-[70vh] w-full object-cover'
+        className='h-[75vh] w-full object-cover'
         width={1500}
         height={1500}
       />
-      <div className='absolute bg-sky-600/60 text-white p-8 top-10 right-10'>
-        <h1 className='text-3xl'>Technology Based HIV Program for the Youth</h1>
+      <div className='absolute bg-sky-600/60 text-white p-8 top-32 right-10'>
+        <h1 className='text-2xl'>Technology Based HIV Program for the Youth</h1>
         <p className='text-sm mt-3'>
           In time we will put the proper slogan/tagline of THPPY here
         </p>
       </div>
       <div className='absolute -bottom-20 w-full'>
-        <nav className='bg-sky-600/95 w-[50vw] mx-auto p-10 flex justify-center gap-16 text-white'>
+        <nav className='bg-sky-600/95 w-[45vw] mx-auto p-8 flex justify-center gap-16 text-white'>
           <SocialLink
             icon={<IconBrandFacebookFilled />}
             href='#'

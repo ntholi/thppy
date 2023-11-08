@@ -28,7 +28,7 @@ export default function AppNav() {
   ];
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} maxWidth='xl'>
+    <Navbar onMenuOpenChange={setIsMenuOpen} maxWidth='xl' className='absolute'>
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
@@ -48,7 +48,7 @@ export default function AppNav() {
         </NavbarItem>
         <NavbarItem>
           <Link color='foreground' href='#'>
-            Let's Converse
+            Let&apos;s Converse
           </Link>
         </NavbarItem>
         <NavbarItem>
