@@ -9,57 +9,71 @@ import {
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import About from './home/About';
+import Events from './home/Events';
 
 export default function Home() {
   return (
-    <main className='relative'>
-      <Image
-        src='/images/happy-teen-unsplash.jpg'
-        alt='THPPY'
-        className='h-[75vh] w-full object-cover'
-        width={1500}
-        height={1500}
-      />
-      <div className='absolute right-2 top-24 bg-sky-600/60 p-8 text-white max-md:left-2 md:right-10'>
-        <h1 className='text-2xl'>Technology Based HIV Program for the Youth</h1>
-        <p className='mt-3 text-sm'>
-          In time we will put the proper slogan/tagline of THPPY here
-        </p>
-        <div className='mt-10 flex justify-center gap-2 md:justify-start'>
-          <button className='w-44 rounded-sm bg-red-600/90 py-2'>
-            <h3>Forum</h3>
-            <p className='text-xs'>Let&apos;s Converse</p>
-          </button>
-          <button className='w-44 rounded-sm bg-black/50 py-2'>
-            <h3>Messages</h3>
-            <p className='text-xs'>Private Messages</p>
-          </button>
+    <main>
+      <div className='relative'>
+        <Image
+          src='/images/happy-teen-unsplash.jpg'
+          alt='THPPY'
+          className='h-[75vh] w-full object-cover'
+          width={1500}
+          height={1500}
+        />
+        <div className='absolute right-2 top-24 bg-sky-600/60 p-8 text-white max-md:left-2 md:right-10'>
+          <h1 className='text-2xl'>
+            Technology Based HIV Program for the Youth
+          </h1>
+          <p className='mt-3 text-sm'>
+            In time we will put the proper slogan/tagline of THPPY here
+          </p>
+          <div className='mt-10 flex justify-center gap-2 md:justify-start'>
+            <button className='w-44 rounded-sm bg-red-600/90 py-2'>
+              <h3>Forum</h3>
+              <p className='text-xs'>Let&apos;s Converse</p>
+            </button>
+            <button className='w-44 rounded-sm bg-black/50 py-2'>
+              <h3>Messages</h3>
+              <p className='text-xs'>Private Messages</p>
+            </button>
+          </div>
+        </div>
+        <div className='absolute -bottom-20 w-full'>
+          <nav className='mx-auto flex justify-center gap-16 bg-sky-600/95 p-8 text-white lg:w-[45vw]'>
+            <SocialLink
+              icon={<IconBrandFacebook />}
+              href='https://www.facebook.com/THEREALTHPPY'
+              label='Facebook'
+            />
+            <SocialLink
+              icon={<IconBrandInstagram />}
+              href='https://www.instagram.com/therealthppy'
+              label='Twitter'
+            />
+            <SocialLink
+              icon={<IconBrandTwitter />}
+              href='https://twitter.com/therealthppy'
+              label='Instagram'
+            />
+            <SocialLink
+              icon={<IconBrandYoutube />}
+              href='https://www.youtube.com/channel/UCDmUEN0IH_3ZA1xAP95HrCw'
+              label='Youtube'
+            />
+          </nav>
         </div>
       </div>
-      <div className='absolute -bottom-20 w-full'>
-        <nav className='mx-auto flex justify-center gap-16 bg-sky-600/95 p-8 text-white lg:w-[45vw]'>
-          <SocialLink
-            icon={<IconBrandFacebook />}
-            href='https://www.facebook.com/THEREALTHPPY'
-            label='Facebook'
-          />
-          <SocialLink
-            icon={<IconBrandInstagram />}
-            href='https://www.instagram.com/therealthppy'
-            label='Twitter'
-          />
-          <SocialLink
-            icon={<IconBrandTwitter />}
-            href='https://twitter.com/therealthppy'
-            label='Instagram'
-          />
-          <SocialLink
-            icon={<IconBrandYoutube />}
-            href='https://www.youtube.com/channel/UCDmUEN0IH_3ZA1xAP95HrCw'
-            label='Youtube'
-          />
-        </nav>
-      </div>
+      <section className='container mx-auto mt-32 grid grid-cols-12 px-4'>
+        <article className='col-span-8'>
+          <About />
+        </article>
+        <aside className='col-span-4'>
+          <Events />
+        </aside>
+      </section>
     </main>
   );
 }
