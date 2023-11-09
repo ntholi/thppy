@@ -8,6 +8,9 @@ dependencies:
   '@nextui-org/button':
     specifier: ^2.0.24
     version: 2.0.24(@nextui-org/system@2.0.13)(@nextui-org/theme@2.1.15)(framer-motion@10.16.4)(react-dom@18.2.0)(react@18.2.0)(tailwind-variants@0.1.18)
+  '@nextui-org/input':
+    specifier: ^2.1.16
+    version: 2.1.16(@nextui-org/system@2.0.13)(@nextui-org/theme@2.1.15)(@types/react@18.2.37)(react-dom@18.2.0)(react@18.2.0)
   '@nextui-org/link':
     specifier: ^2.0.25
     version: 2.0.25(@nextui-org/system@2.0.13)(@nextui-org/theme@2.1.15)(react-dom@18.2.0)(react@18.2.0)
@@ -17,6 +20,9 @@ dependencies:
   '@nextui-org/react':
     specifier: ^2.2.6
     version: 2.2.6(@types/react@18.2.37)(framer-motion@10.16.4)(react-dom@18.2.0)(react@18.2.0)(tailwind-variants@0.1.18)(tailwindcss@3.3.5)
+  '@nextui-org/user':
+    specifier: ^2.0.25
+    version: 2.0.25(@nextui-org/system@2.0.13)(@nextui-org/theme@2.1.15)(react-dom@18.2.0)(react@18.2.0)
   '@tabler/icons-react':
     specifier: ^2.40.0
     version: 2.40.0(react@18.2.0)
@@ -1187,6 +1193,33 @@ packages:
       - '@types/react'
     dev: false
 
+  /@nextui-org/input@2.1.16(@nextui-org/system@2.0.13)(@nextui-org/theme@2.1.15)(@types/react@18.2.37)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-nUTlAvsXj5t88ycvQdICxf78/pko6Wznx2OomvYjb3E45eb77twQcWUDhydkJCWIh3b4AhGHSMM6GYxwWUgMDA==}
+    peerDependencies:
+      '@nextui-org/system': '>=2.0.0'
+      '@nextui-org/theme': '>=2.1.0'
+      react: '>=18'
+      react-dom: '>=18'
+    dependencies:
+      '@nextui-org/react-utils': 2.0.10(react@18.2.0)
+      '@nextui-org/shared-icons': 2.0.6(react@18.2.0)
+      '@nextui-org/shared-utils': 2.0.4(react@18.2.0)
+      '@nextui-org/system': 2.0.13(@nextui-org/theme@2.1.15)(react-dom@18.2.0)(react@18.2.0)(tailwind-variants@0.1.18)
+      '@nextui-org/theme': 2.1.15(tailwindcss@3.3.5)
+      '@react-aria/focus': 3.14.3(react@18.2.0)
+      '@react-aria/interactions': 3.19.1(react@18.2.0)
+      '@react-aria/textfield': 3.12.2(react@18.2.0)
+      '@react-aria/utils': 3.21.1(react@18.2.0)
+      '@react-stately/utils': 3.8.0(react@18.2.0)
+      '@react-types/shared': 3.21.0(react@18.2.0)
+      '@react-types/textfield': 3.8.1(react@18.2.0)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      react-textarea-autosize: 8.5.3(@types/react@18.2.37)(react@18.2.0)
+    transitivePeerDependencies:
+      - '@types/react'
+    dev: false
+
   /@nextui-org/kbd@2.0.23(@nextui-org/theme@2.1.15)(react-dom@18.2.0)(react@18.2.0)(tailwind-variants@0.1.18):
     resolution: {integrity: sha512-oTSw3mVqrGfON3yMyzfcZE2yhHPdw6NUZ/cnf4vPlx0j7hIFK0tRPmzcL/l7tq12XpDpn6uhdWsrZewXpu0jFg==}
     peerDependencies:
@@ -1595,6 +1628,14 @@ packages:
 
   /@nextui-org/shared-icons@2.0.5(react@18.2.0):
     resolution: {integrity: sha512-ItcvIAEEHoD09oQmL9KEyGGmNIh3nP6TrEiAFSTznyEmRAyK5sOIQbMf+47+auwYJJbXmwCdU2WldbQOcAEuqw==}
+    peerDependencies:
+      react: '>=18'
+    dependencies:
+      react: 18.2.0
+    dev: false
+
+  /@nextui-org/shared-icons@2.0.6(react@18.2.0):
+    resolution: {integrity: sha512-Mw5utPJAclFaeKAZowznEgabI5gdhXrW0iMaMA18Y4zcZRTidAc0WFeGYUlX876NxYLPc1Zk4bZUhQvMe+7uWg==}
     peerDependencies:
       react: '>=18'
     dependencies:

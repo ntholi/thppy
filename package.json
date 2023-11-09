@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "@nextui-org/button": "^2.0.24",
+    "@nextui-org/input": "^2.1.16",
     "@nextui-org/link": "^2.0.25",
     "@nextui-org/navbar": "^2.0.25",
     "@nextui-org/react": "^2.2.6",
+    "@nextui-org/user": "^2.0.25",
     "@tabler/icons-react": "^2.40.0",
     "firebase": "^10.5.2",
     "framer-motion": "^10.16.4",
