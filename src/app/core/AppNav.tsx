@@ -11,11 +11,13 @@ import {
 } from '@nextui-org/navbar';
 import { Link } from '@nextui-org/link';
 import Logo from './Logo';
-import { Button } from '@nextui-org/button';
 import { useState } from 'react';
+import { useSession } from 'next-auth/react';
+import { Avatar } from '@nextui-org/avatar';
 
 export default function AppNav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { data: session, status } = useSession();
 
   const menuItems = [
     'Home',
@@ -39,7 +41,7 @@ export default function AppNav() {
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className='hidden sm:flex gap-4' justify='center'>
+      <NavbarContent className='hidden gap-4 sm:flex' justify='center'>
         <NavbarItem isActive>
           <Link color='foreground' href='#'>
             Home
@@ -68,7 +70,15 @@ export default function AppNav() {
       </NavbarContent>
       <NavbarContent justify='end'>
         <NavbarItem className='hidden lg:flex'>
-          <Link href='#'>Login</Link>
+          {session ? (
+            <Avatar
+              size='sm'
+              src={session.user?.image || undefined}
+              name={session.user?.name || undefined}
+            />
+          ) : (
+            <Link href='/api/auth/signin'>Login</Link>
+          )}
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
