@@ -1,17 +1,11 @@
 import { getUpcomingEvents } from '@/lib/eventsService';
-import {
-  IconLocation,
-  IconMapPin,
-  IconPin,
-  IconPoint,
-} from '@tabler/icons-react';
-import React, { useEffect, useState } from 'react';
+import { IconMapPin } from '@tabler/icons-react';
 
 export default async function EventsView() {
   const events = await getUpcomingEvents();
   return (
     <>
-      <h2>
+      <h2 className='text-lg font-bold'>
         Up coming <span className='text-sky-500'>Events</span>
         <hr className='w-10 border-1 border-sky-400' />
       </h2>
