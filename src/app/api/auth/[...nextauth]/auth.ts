@@ -22,4 +22,13 @@ export const authOptions = {
   adapter: FirestoreAdapter({
     credential: cert(googleCredentials),
   }),
+  callbacks: {
+    async session({ session, token, user }) {
+      if (session.user) {
+        session.user.id = user.id;
+        // session.user.role = user.role;
+      }
+      return session;
+    },
+  },
 } as AuthOptions;
