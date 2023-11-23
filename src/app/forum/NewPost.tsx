@@ -29,7 +29,7 @@ export default function NewPost() {
   };
 
   return (
-    <section className='flex flex-col items-end'>
+    <section className='flex flex-col items-end bg-white p-3 shadow-md'>
       <Textarea
         className=''
         variant='bordered'

@@ -31,14 +31,20 @@ export default function Home() {
             In time we will put the proper slogan/tagline of THPPY here
           </p>
           <div className='mt-10 flex justify-center gap-2 md:justify-start'>
-            <button className='w-44 rounded-sm bg-red-600/90 py-2'>
+            <Link
+              href='/forum'
+              className='w-44 rounded-sm bg-red-600/90 py-2 text-center'
+            >
               <h3>Forum</h3>
               <p className='text-xs'>Let&apos;s Converse</p>
-            </button>
-            <button className='w-44 rounded-sm bg-black/50 py-2'>
+            </Link>
+            <Link
+              href=''
+              className='w-44 rounded-sm bg-black/50 py-2 text-center'
+            >
               <h3>Messages</h3>
               <p className='text-xs'>Private Messages</p>
-            </button>
+            </Link>
           </div>
         </div>
         <div className='absolute -bottom-20 w-full'>
