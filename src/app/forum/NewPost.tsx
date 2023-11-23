@@ -19,8 +19,6 @@ export default function NewPost() {
         await addDoc(collection(db, 'forum'), {
           content,
           userId: session?.user?.id,
-          userDisplayName: session.user.name ?? '',
-          userPhotoURL: session?.user?.image ?? '',
           createdAt: serverTimestamp(),
         });
       }

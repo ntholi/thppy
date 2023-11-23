@@ -21,6 +21,7 @@ import { useState } from 'react';
 import { useSession } from 'next-auth/react';
 import { Avatar } from '@nextui-org/avatar';
 import { IconLogout, IconLogout2, IconStepOut } from '@tabler/icons-react';
+import { signOut } from 'next-auth/react';
 
 export default function AppNav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -89,6 +90,9 @@ export default function AppNav() {
               <DropdownMenu aria-label='Account'>
                 <DropdownItem
                   key='logout'
+                  onClick={() => {
+                    signOut();
+                  }}
                   startContent={<IconLogout2 size={20} />}
                 >
                   Logout

@@ -1,14 +1,9 @@
 'use client';
 import { db } from '@/lib/firebase';
 import { Post } from '@/lib/modals';
-import {
-  collection,
-  doc,
-  onSnapshot,
-  orderBy,
-  query,
-} from 'firebase/firestore';
+import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
 import React, { useEffect } from 'react';
+import PostDisplay from './DisplayPost';
 
 export default function PostList() {
   const [posts, setPosts] = React.useState<Post[]>([]);
@@ -29,7 +24,7 @@ export default function PostList() {
   return (
     <div>
       {posts.map((post) => {
-        return <div key={post.id}>{post.content}</div>;
+        return <PostDisplay key={post.id} post={post} />;
       })}
     </div>
   );
