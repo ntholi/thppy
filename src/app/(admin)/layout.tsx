@@ -3,6 +3,7 @@
 import '@mantine/core/styles.css';
 
 import { MantineProvider, ColorSchemeScript } from '@mantine/core';
+import AppShell from './appshell/AppShell';
 
 export const metadata = {
   title: 'THPPY Admin',
@@ -20,7 +21,9 @@ export default function RootLayout({
         <ColorSchemeScript />
       </head>
       <body>
-        <MantineProvider>{children}</MantineProvider>
+        <MantineProvider>
+          <AppShell>{children}</AppShell>
+        </MantineProvider>
       </body>
     </html>
   );
