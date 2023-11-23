@@ -1,8 +1,9 @@
 'use client';
 import { Button, Textarea, User } from '@nextui-org/react';
 import { useSession } from 'next-auth/react';
-import { createPost } from './actions';
 import { useState } from 'react';
+import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
+import { db } from '@/lib/firebase';
 
 export default function NewPost() {
   const [content, setContent] = useState('');
@@ -15,9 +16,12 @@ export default function NewPost() {
     try {
       setPosting(true);
       if (content && content.trim().length > 0) {
-        await createPost({
+        await addDoc(collection(db, 'forum'), {
           content,
           userId: session?.user?.id,
+          userDisplayName: session.user.name ?? '',
+          userPhotoURL: session?.user?.image ?? '',
+          createdAt: serverTimestamp(),
         });
       }
     } catch (err) {
@@ -31,7 +35,6 @@ export default function NewPost() {
   return (
     <section className='flex flex-col items-end bg-white p-3 shadow-md'>
       <Textarea
-        className=''
         variant='bordered'
         labelPlacement='outside'
         value={content}
@@ -39,7 +42,12 @@ export default function NewPost() {
         label='New Topic'
         placeholder='What do you want to discuss about?'
       />
-      <Button onClick={handleSubmit} isLoading={posting}>
+      <Button
+        onClick={handleSubmit}
+        color='danger'
+        isLoading={posting}
+        className='mt-5'
+      >
         Post
       </Button>
     </section>
