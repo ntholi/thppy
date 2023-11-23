@@ -45,13 +45,12 @@ export default function AppNav() {
         />
         <NavbarBrand>
           <Logo />
-          <p className='font-bold text-inherit'>THPPY</p>
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className='hidden gap-4 sm:flex' justify='center'>
         <NavbarItem isActive>
-          <Link color='foreground' href='#'>
+          <Link color='foreground' href='/'>
             Home
           </Link>
         </NavbarItem>
