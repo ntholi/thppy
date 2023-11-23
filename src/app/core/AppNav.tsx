@@ -9,11 +9,18 @@ import {
   NavbarMenuItem,
   NavbarMenuToggle,
 } from '@nextui-org/navbar';
+import {
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownItem,
+} from '@nextui-org/dropdown';
 import { Link } from '@nextui-org/link';
 import Logo from './Logo';
 import { useState } from 'react';
 import { useSession } from 'next-auth/react';
 import { Avatar } from '@nextui-org/avatar';
+import { IconLogout, IconLogout2, IconStepOut } from '@tabler/icons-react';
 
 export default function AppNav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -71,11 +78,23 @@ export default function AppNav() {
       <NavbarContent justify='end'>
         <NavbarItem className='hidden lg:flex'>
           {session ? (
-            <Avatar
-              size='sm'
-              src={session.user?.image || undefined}
-              name={session.user?.name || undefined}
-            />
+            <Dropdown>
+              <DropdownTrigger>
+                <Avatar
+                  size='sm'
+                  src={session.user?.image || undefined}
+                  name={session.user?.name || undefined}
+                />
+              </DropdownTrigger>
+              <DropdownMenu aria-label='Account'>
+                <DropdownItem
+                  key='logout'
+                  startContent={<IconLogout2 size={20} />}
+                >
+                  Logout
+                </DropdownItem>
+              </DropdownMenu>
+            </Dropdown>
           ) : (
             <Link href='/api/auth/signin'>Login</Link>
           )}
@@ -89,8 +108,8 @@ export default function AppNav() {
                 index === 2
                   ? 'primary'
                   : index === menuItems.length - 1
-                  ? 'danger'
-                  : 'foreground'
+                    ? 'danger'
+                    : 'foreground'
               }
               className='w-full'
               href='#'
