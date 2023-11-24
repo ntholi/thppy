@@ -1,5 +1,6 @@
 import { getUpcomingEvents } from '@/lib/eventsService';
 import { IconMapPin } from '@tabler/icons-react';
+import RawDiv from '../core/RawDiv';
 
 export default async function EventsView() {
   const events = await getUpcomingEvents();
@@ -24,7 +25,9 @@ export default async function EventsView() {
               <p className='flex items-center gap-1 text-sm text-gray-500'>
                 <IconMapPin size='0.9rem' /> {event.location}{' '}
               </p>
-              <p className='mt-2 w-[80%] pr-3 text-sm'>{event.description}</p>
+              <p className='mt-2 w-[80%] pr-3 text-sm'>
+                <RawDiv html={event.description} />
+              </p>
             </div>
           </article>
         ))}
