@@ -16,7 +16,7 @@ export interface Event {
 }
 
 export async function getUpcomingEvents(): Promise<Event[]> {
-  const q = query(collection(db, 'events'), where('date', '>', new Date()));
+  const q = query(collection(db, 'events')); //TODO: , where('date', '>', new Date()));
   const snapshot = await getDocs(q);
   const events: Event[] = [];
   snapshot.forEach((doc) => {
