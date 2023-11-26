@@ -99,7 +99,7 @@ export default function AppNav() {
               </DropdownMenu>
             </Dropdown>
           ) : (
-            <Link href='/api/auth/signin'>Login</Link>
+            <Link href='/api/auth/signin'>Register</Link>
           )}
         </NavbarItem>
       </NavbarContent>
